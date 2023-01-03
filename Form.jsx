@@ -1,7 +1,7 @@
 // npm i formik yup
 import React from 'react'
 import { useFormik } from "formik"
-import * as You from "yup"
+import * as Yup from "yup"
 
 const Form = () => {
 
@@ -17,11 +17,9 @@ const Form = () => {
             email : Yup.string().email("Invalid email address").required("Email is required")
         }),
         onSubmit : (values) => {
-
+            console.log(formik.values)
         }
     })
-
-    console.log()
 
     return (
         <form onSubmit={formik.handleSubmit}>
